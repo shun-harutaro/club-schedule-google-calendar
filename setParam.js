@@ -13,7 +13,7 @@ const params = {
         dateTime: null,
         timeZone: 'Asia/Tokyo',
     },
-    colorId: 6, // @see https://lukeboyle.com/blog-posts/2016/04/google-calendar-api---color-id
+    colorId: 6, // orange
 };
 
 // "hh:mm～hh:mm" のフォーマットを[ms, ms] に変換

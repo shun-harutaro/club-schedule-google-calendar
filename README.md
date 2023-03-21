@@ -11,7 +11,7 @@
 ```
 touch .env
 echo "calendarid = [xxxx@group.calendar.google.com]" >> .env
-echo "file name = [xxxx.xlsm] >> .env
+echo "filename = [xxxx.xlsm] >> .env
 ```
 6. 実行する
 ```

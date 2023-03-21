@@ -1,8 +1,8 @@
 /* This file extracts xlsx file and generates object */
-//const FILE_NAME = process.env.filename;
+const FILE_NAME = process.env.filename;
 
 const XLSX = require("xlsx");
-const book = XLSX.readFile("schedule.xlsm");
+const book = XLSX.readFile(FILE_NAME);
 
 const sheet = book.Sheets[book.SheetNames[0]];
 

@@ -1,8 +1,11 @@
 const { google } = require('googleapis');
 const getOAuth2Client = require('./auth');
+require('dotenv').config();
 
 const CONVERT_JSON = require('./convertJson');
 const SET_PARAM = require("./setParam");
+
+const CALENDAR_ID = process.env.calendarid;
 
 (async () => {
     const OBJ = await CONVERT_JSON.read();
@@ -20,7 +23,7 @@ const SET_PARAM = require("./setParam");
         const calendar = google.calendar({ version: 'v3', auth }); // カレンダーAPI連携用クライアント取得
         await calendar.events.insert({
             auth,
-            calendarId: '1a9fa76f338b27bbf6dadd20134032028c25c2abb78c3aa1cb61f86af8ba6ca5@group.calendar.google.com',
+            calendarId: CALENDAR_ID,
             resource: params,
         }).then(res => {
             console.log(`success #${i}`);
