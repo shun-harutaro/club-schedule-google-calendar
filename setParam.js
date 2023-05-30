@@ -47,7 +47,7 @@ exports.setParam = (obj) => {
     }
     params.start.dateTime = start;
     params.end.dateTime = end;
-    params.summary = "部活";
+    params.summary = obj.location ? '部活(多目的ホール)' : '部活(教室)';
     params.location = obj.location;
     params.description = `- 活動可能場所：${obj.detail}
 - 備考：${obj.remark}`;
