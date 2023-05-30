@@ -28,7 +28,7 @@ const CALENDAR_ID = process.env.calendarid;
         }).then(res => {
             console.log(`success #${i}`);
         }).catch(err => {
-            console.log(`faild #${i+1}`);
+            console.log(`faild #${i}`);
             const errData = err.response.data.errors;
             console.log({errData});
         });
